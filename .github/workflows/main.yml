@@ -1,0 +1,17 @@
+name: Deploy to Azure Web Apps
+on:
+  push
+
+jobs:
+  build:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: build
+        run: |
+          npm install
+          npm run build
+
+    
